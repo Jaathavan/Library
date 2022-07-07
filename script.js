@@ -7,12 +7,7 @@ function Book(author, title, pageCount) {
 }
 
 function addBookToLibrary(a, t, p) {
-    myLibrary.push({ 
-        author: a, 
-        title: t, 
-        pageCount: p 
-    })
-  // do stuff here
+    myLibrary.push(new Book(a, t, p))
 }
 
 const library = document.querySelector('.books');
