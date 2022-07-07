@@ -19,17 +19,17 @@ function displayBooks() {
 
         //add author element
         let author = document.createElement("div");
-        author.textContent = myLibrary[i].author;
+        author.textContent = "Author: " + myLibrary[i].author;
         book.appendChild(author).className = "author";
 
         //add title element
         let title = document.createElement("div");
-        title.textContent = myLibrary[i].title;
+        title.textContent = "Title: " + myLibrary[i].title;
         book.appendChild(title).className = "title";
 
         //add pageCount element
         let pageCount = document.createElement("div");
-        pageCount.textContent = myLibrary[i].pageCount;
+        pageCount.textContent = "Page Count: " + myLibrary[i].pageCount;
         book.appendChild(pageCount).className = "pageCount";
 
         library.appendChild(book).className = "book";
