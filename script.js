@@ -1,7 +1,9 @@
 let myLibrary = [{author: "a", title: "b", pageCount: "c"}, {author: "y", title: "x", pageCount: "z"}];
 
-function Book() {
-  // the constructor...
+function Book(author, title, pageCount) {
+  this.author = author;
+  this.title = title;
+  this.pageCount = pageCount
 }
 
 function addBookToLibrary(a, t, p) {
