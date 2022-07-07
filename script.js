@@ -18,8 +18,23 @@ const library = document.querySelector('.books');
 function displayBooks() {
     for (let i = 0; i < myLibrary.length; i++) {
         let book = document.createElement("div");
-        book.textContent = myLibrary[i];
         book.id = i;
+
+        //add author element
+        let author = document.createElement("div");
+        author.textContent = myLibrary[i].author;
+        book.appendChild(author).className = "author";
+
+        //add title element
+        let title = document.createElement("div");
+        title.textContent = myLibrary[i].title;
+        book.appendChild(title).className = "title";
+
+        //add pageCount element
+        let pageCount = document.createElement("div");
+        pageCount.textContent = myLibrary[i].pageCount;
+        book.appendChild(pageCount).className = "pageCount";
+
         library.appendChild(book).className = "book";
     }
 }
