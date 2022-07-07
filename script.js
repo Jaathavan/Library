@@ -1,10 +1,15 @@
-let myLibrary = ["H.P", "S", "K"];
+let myLibrary = [{author: "a", title: "b", pageCount: "c"}, {author: "y", title: "x", pageCount: "z"}];
 
-function Book(author, title, pageCount) {
+function Book() {
   // the constructor...
 }
 
-function addBookToLibrary() {
+function addBookToLibrary(a, t, p) {
+    myLibrary.push({ 
+        author: a, 
+        title: t, 
+        pageCount: p 
+    })
   // do stuff here
 }
 
@@ -14,6 +19,7 @@ function displayBooks() {
     for (let i = 0; i < myLibrary.length; i++) {
         let book = document.createElement("div");
         book.textContent = myLibrary[i];
+        book.id = i;
         library.appendChild(book).className = "book";
     }
 }
